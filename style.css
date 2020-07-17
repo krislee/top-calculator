@@ -1,0 +1,99 @@
+h1{
+    width: 400px;
+    margin: 0 auto;
+    margin-top:30px;
+    text-align: center;
+    text-decoration: underline;
+}
+.center{
+   width:400px;
+   margin: 0 auto; 
+   /*since setting a width and margin:0 auto for body did not center the calculator div, 
+   set another div around the .calculator div and set the width and margin: 0 auto to center*/
+}
+.calculator{
+    display: grid;
+    width:400px;
+    grid-template-columns: 400px;
+    grid-template-rows: 75px 500px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.calculatorDisplay{
+    font-size: 40px;
+    text-align: right;
+    padding-top: 12px; /* this helps to center the display text */
+    padding-right:5px;
+    background-color: rgb(211, 206, 206);
+    border-radius:3px;
+    border: 1px solid black;
+}
+/* span{
+    vertical-align: -10px; 
+    moves down the 0 but when we press the keys, it goes back up
+    because the text is set to calculatorDisplay
+} */
+.calculatorKeys{
+    display: grid;
+    text-align: center;
+    width: 400px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,75px);
+    grid-template-areas: 
+        "clear clear delete divide"
+        "seven eight night multiply"
+        "four five six subtract"
+        "one two three addition"
+        "zeros zeros decimal equal"
+}
+.span-two{
+    grid-area: clear;
+}
+.delete{
+    grid-area: delete;
+}
+.oneButton{
+    grid-area: one;
+}
+.twoButton{
+    grid-area: two;
+}
+.threeButton{
+    grid-area: three;
+}
+.fourButton{
+    grid-area: four;
+}
+.fiveButton{
+    grid-area: five;
+}
+.sixButton{
+    grid-area: six;
+}
+.sevenButton{
+    grid-area: seven;
+}
+.eightButton{
+    grid-area: eight;
+}
+.nightButton{
+    grid-area: nine;
+}
+.zeroButton{
+    grid-area: zeros;
+}
+.decimalButton{
+    grid-area: decimal;
+}
+.addition{
+    grid-area: addition;
+}
+.subtraction{
+    grid-area: subtract;
+}
+.division{
+    grid-area: divide;
+}
+.multiplication{
+    grid-area: multiply;
+}
